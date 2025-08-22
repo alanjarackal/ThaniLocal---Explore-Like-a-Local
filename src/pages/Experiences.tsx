@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ExperienceCard } from '../components/ExperienceCard';
 import { Filter, Search, Loader2 } from 'lucide-react';
 import { getExperiences } from '../lib/api';

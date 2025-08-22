@@ -1,4 +1,4 @@
-import { MapPin, Users, ShoppingBag, ChevronDown, ArrowRight, Calendar, Star, Heart } from 'lucide-react';
+import { MapPin, Users, ShoppingBag, ChevronDown, ArrowRight, Star, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

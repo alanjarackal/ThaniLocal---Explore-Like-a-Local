@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Package } from 'lucide-react';
 import type { Product } from '../lib/types';

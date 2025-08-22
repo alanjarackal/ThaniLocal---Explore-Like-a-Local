@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { X } from 'lucide-react';
 import { useAuth } from '../lib/store';
 import type { Profile } from '../lib/types';
@@ -13,7 +13,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
-  const [role, setRole] = useState<Profile['role']>('tourist');
+  const [role, setRole] = useState<Profile['role']>('user');
   const [error, setError] = useState<string | null>(null);
   const { signIn, signUp } = useAuth();
 
@@ -26,6 +26,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
     try {
       if (isSignUp) {
         await signUp(email, password, {
+          email,
           full_name: fullName,
           role,
         });
@@ -79,8 +80,8 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   onChange={(e) => setRole(e.target.value as Profile['role'])}
                   className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
                 >
-                  <option value="tourist">Tourist</option>
-                  <option value="local">Local Guide/Artisan</option>
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
                 </select>
               </div>
             </>

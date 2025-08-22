@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, MapPin, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { format, parseISO } from 'date-fns';
@@ -15,11 +14,10 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
     description,
     image_url,
     location,
-    price,
     date,
     max_participants,
     current_participants,
-    rating,
+    rating
   } = experience;
 
   const availableSpots = max_participants - current_participants;
@@ -34,9 +32,9 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
             alt={title}
             className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
           />
-          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold text-emerald-600">
+          {/* <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold text-emerald-600">
             ${price}
-          </div>
+          </div> */}
           {availableSpots < 5 && (
             <div className="absolute bottom-4 left-4 bg-red-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-semibold text-white">
               Only {availableSpots} spots left!

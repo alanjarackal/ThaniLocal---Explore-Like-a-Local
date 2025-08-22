@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabaseClient';
 import { Link, Navigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import type { Database } from '../../lib/types/supabase';
 
 interface DashboardStats {
   totalUsers: number;
@@ -797,4 +796,4 @@ export default function AdminDashboard() {
       </div>
     </div>
   );
-} 
+}

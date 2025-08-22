@@ -1,6 +1,4 @@
 import { createClient } from '@supabase/supabase-js';
-import { readFileSync } from 'fs';
-import { join } from 'path';
 
 // Supabase configuration
 const supabaseUrl = 'https://uedobujkjgufdlodhbmd.supabase.co';
@@ -201,4 +199,4 @@ async function seedDatabase() {
 verifyTableStructure();
 
 // Execute the seeding
-seedDatabase(); 
+seedDatabase();
